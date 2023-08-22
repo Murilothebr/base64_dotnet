@@ -15,7 +15,7 @@ public class ConvertStringHandler : ConvertHandler
     {
         var methodFlag = args[0];
 
-        if (args[1] is "-f")
+        if (args.Length > 1 && args[1] is "-f")
         {
             return base.Handle(request, args) 
                 ?? throw new ArgumentNullException();

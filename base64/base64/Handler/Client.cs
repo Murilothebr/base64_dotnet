@@ -10,11 +10,13 @@ public class Client : ConvertHandler
 {
     // The client code is usually suited to work with a single handler. In
     // most cases, it is not even aware that the handler is part of a chain.
-    public static void ClientCode(ConvertHandler handler, string[] args)
+    public static object ClientCode(ConvertHandler handler, string[] args)
     {
         if (handler is null)
-            return;
+            throw new ArgumentNullException();
 
-        handler.Handle(args, args);
+
+        return handler.Handle(args, args)
+                ?? throw new ArgumentNullException(); 
     }
 }

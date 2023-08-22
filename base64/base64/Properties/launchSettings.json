@@ -2,7 +2,7 @@
   "profiles": {
     "Base64Converter": {
       "commandName": "Project",
-      "commandLineArgs": "-e"
+      "commandLineArgs": "-d -f abc"
     }
   }
 }

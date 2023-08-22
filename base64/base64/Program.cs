@@ -13,18 +13,16 @@ namespace Base64Converter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"args: {args.Length}");
-
-            if (args.Length < 3)
-                throw new WrongArgumentException();
-
-            var errorHandlher =new Error
             var stringHandler = new ConvertStringHandler();
             var fileHandler = new ConvertFileHandler();
+            var helpHandlher = new HelpHandler();
 
+            helpHandlher.SetNext(stringHandler);
             stringHandler.SetNext(fileHandler);
 
-            Client.ClientCode(stringHandler, args);
+            var handlerResult = Client.ClientCode(helpHandlher, args);
+
+            Console.WriteLine(handlerResult);
         }
     }
 }
