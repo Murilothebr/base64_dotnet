@@ -7,22 +7,21 @@ using System;
 //add flags
 //add chain handler / factory Software desing pattern
 
-namespace Base64Converter
+namespace Base64Converter;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            var stringHandler = new ConvertStringHandler();
-            var fileHandler = new ConvertFileHandler();
-            var helpHandlher = new HelpHandler();
+        var stringHandler = new ConvertStringHandler();
+        var fileHandler = new ConvertFileHandler();
+        var helpHandlher = new HelpHandler();
 
-            helpHandlher.SetNext(stringHandler);
-            stringHandler.SetNext(fileHandler);
+        helpHandlher.SetNext(stringHandler);
+        stringHandler.SetNext(fileHandler);
 
-            var handlerResult = Client.ClientCode(helpHandlher, args);
+        var handlerResult = Client.ClientCode(helpHandlher, args);
 
-            Console.WriteLine(handlerResult);
-        }
+        Console.WriteLine(handlerResult);
     }
 }
