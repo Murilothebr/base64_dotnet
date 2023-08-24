@@ -17,7 +17,7 @@ internal class HelpHandler : ConvertHandler
         if (args[0].Length < 2 || (args[0] is not "-e" && args[0] is not "-d"))
             return "Run 'base64 -h' for more information";
 
-
+        //ToDo help text of how to run
         if ((args[0] is "-h"))
         {
             return "teach how to handle actions";
