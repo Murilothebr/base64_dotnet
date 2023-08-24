@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "base64", "base64\base64.csproj", "{BA1A8990-0935-4C6A-82E6-E8DE7CABAC0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base64", "base64\Base64.csproj", "{BA1A8990-0935-4C6A-82E6-E8DE7CABAC0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

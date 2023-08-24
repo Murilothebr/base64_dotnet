@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Base64Converter": {
+      "commandName": "Project",
+      "commandLineArgs": "-d -f abc"
+    }
+  }
+}
